@@ -13,7 +13,6 @@ const blogContent = (req, res) => {
         else {
 
             const response = result[0]
-            console.log(response)
             res.render('blog', { response })
         }
     })
@@ -33,7 +32,7 @@ const blogContentUsingId = (req, res) => {
         else {
 
             res.status(200).send({ result: result[0] })
-            console.log(result[0])
+        
         }
     })
 

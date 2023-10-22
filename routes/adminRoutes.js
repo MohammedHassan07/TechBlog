@@ -1,15 +1,21 @@
 const express = require('express')
-
-const admin = require('../controller/adminController')
+const {createAuthor, logInPage, logIn, insertData, getOne, adminPanel} = require('../controller/adminController')
+const { verifytoken } = require('../middleware/verifyToken')
 
 const route = express.Router()
 
-route.get('/admin', admin.adminPanel)
+route.post('/owner/create-author', createAuthor)
 
-route.post('/admin/insert-data', admin.insertData)
+route.post('/author-log-in', logIn)
 
-route.post('/admin/get-one-blog', admin.getOne)
+route.get('/admin', verifytoken, logInPage)
 
-route.post('/admin/update-data', admin.getOne)
+route.get('/admin-panel', verifytoken,adminPanel)
+
+route.post('/admin/insert-data', verifytoken, insertData)
+
+route.post('/admin/get-one-blog', verifytoken, getOne)
+
+route.post('/admin/update-data', verifytoken, getOne)
 
 module.exports = route
