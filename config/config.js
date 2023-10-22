@@ -3,6 +3,8 @@ const host = 'localhost'
 const user = 'root'
 const password = ''
 const databaseName = 'blogsdb'
+const hashKey = 10
+const secretKey = '//techBlog'
 
 databaseConfiguration = {
 
@@ -11,5 +13,5 @@ databaseConfiguration = {
 
 module.exports = {
 
-    PORT, databaseConfiguration
+    PORT, databaseConfiguration, hashKey, secretKey
 }
