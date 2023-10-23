@@ -32,10 +32,40 @@ const blogContentUsingId = (req, res) => {
         else {
 
             res.status(200).send({ result: result[0] })
-        
+
         }
     })
-
 }
 
-module.exports = { blogContent, blogContentUsingId }
+const blogByAuthor = (req, res) => {
+
+    try {
+
+        let query = `SELECT * FROM Blogs`
+        const author = req.query.author
+
+        if (author === 'Select') query = `SELECT * FROM Blogs`
+        else query = `SELECT * FROM Blogs WHERE Authors = "${author}"`
+
+        console.log(author)
+
+        const connection = req.conn
+
+        connection.query(query, (error, result) => {
+
+            if (error) console.log(error.message)
+
+            else {
+
+                const response = result
+
+                res.status(200).json({ response })
+            }
+        })
+
+    } catch (error) {
+    console.log(error.message)
+}
+}
+
+module.exports = { blogContent, blogContentUsingId, blogByAuthor }
