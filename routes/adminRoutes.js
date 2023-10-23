@@ -8,7 +8,7 @@ route.post('/owner/create-author', createAuthor)
 
 route.post('/author-log-in', logIn)
 
-route.get('/admin', verifytoken, logInPage)
+route.get('/admin', logInPage) // implement when user go back it should redirect to logIn page
 
 route.get('/admin-panel', verifytoken,adminPanel)
 

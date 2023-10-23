@@ -10,8 +10,6 @@ const home = (req, res) => {
 
         else {
 
-
-            console.log(result)
             res.render('home', { result })
         }
     })

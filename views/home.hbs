@@ -41,20 +41,36 @@
     </header>
 
     <main class="container flex-column">
+
         <div>
 
             <h2 class="t-center mt-18" style="color: white;">A Tech Blog for Tech People</h2>
         </div>
 
-        <div class="row">
+        <div>
+            <Select id="author">
+                <option value="Select">Select Author</option>
+                <option value="Dr. Shameem">Dr. Shameem</option>
+                <option value="Dr. Raghib">Dr. Raghib</option>
+                <option value="Dr. Salman">Dr. Salman</option>
+                <option value="Prof. Afeefa">Prof. Afeefa</option>
+                <option value="Prof. Anwar">Prof. Anwar</option>
+            </Select>
+        </div>
 
-            <!-- card -->
+        <div id="row" class="row">
+
+            {{!-- card --}}
 
             {{#each result }}
             <div class="card">
-                <dv>
-                    <img src="{{this.ImgURL}}" alt="Images">
-                </dv>
+
+                <div class="author">
+                    <p>{{this.Authors}}</p>
+                </div>
+                <div>
+                    <img id="card-img" src="{{this.ImgURL}}" alt="Images">
+                </div>
                 <div class="card-body">
                     <h3 class="mt-2">{{this.blogTitle}}</h3>
 
@@ -62,117 +78,6 @@
                 </div>
             </div>
             {{/each}}
-            <!-- card -->
-            <div class="card">
-                <dv>
-                    <img src="../images/group.jpg" alt="">
-                </dv>
-                <div class="card-body">
-                    <h3 class="mt-2">What is Coding</h3>
-
-                    <p class="mt-4">
-                        Lorem ipsum dolor sit amet consectetur iste. Quod excepturi accusamus
-                    </p>
-                </div>
-            </div>
-
-            <!-- card -->
-            <div class="card">
-                <dv>
-                    <img src="../images/women-in-tech2-1.jpg" alt="">
-                </dv>
-                <div class="card-body">
-                    <h3 class="mt-2">What is Coding</h3>
-
-                    <p class="mt-4">
-                        Lorem ipsum dolor sit amet consectetur iste. Quod excepturi accusamus
-                    </p>
-                </div>
-            </div>
-
-            <!-- card -->
-            <div class="card">
-                <dv>
-                    <img src="../images/group.jpg" alt="">
-                </dv>
-                <div class="card-body">
-                    <h3 class="mt-2">What is Coding</h3>
-
-                    <p class="mt-4">
-                        Lorem ipsum dolor sit amet consectetur iste. Quod excepturi accusamus
-                    </p>
-                </div>
-            </div>
-
-            <!-- card -->
-            <div class="card">
-                <dv>
-                    <img src="../images/laptoprepaier.png" alt="">
-                </dv>
-                <div class="card-body">
-                    <h3 class="mt-2">What is Coding</h3>
-
-                    <p class="mt-4">
-                        Lorem ipsum dolor sit amet consectetur iste. Quod excepturi accusamus
-                    </p>
-                </div>
-            </div>
-            <!-- card -->
-            <div class="card">
-                <dv>
-                    <img src="../images/1.jpg" alt="">
-                </dv>
-                <div class="card-body">
-                    <h3 class="mt-2">What is Coding</h3>
-
-                    <p class="mt-4">
-                        Lorem ipsum dolor sit amet consectetur iste. Quod excepturi accusamus
-                    </p>
-                </div>
-            </div>
-
-            <!-- card -->
-            <div class="card">
-                <dv>
-                    <img src="../images/logo.jpg" alt="">
-                </dv>
-                <div class="card-body">
-                    <h3 class="mt-2">What is Coding</h3>
-
-                    <p class="mt-4">
-                        Lorem ipsum dolor sit amet consectetur iste. Quod excepturi accusamus
-                    </p>
-                </div>
-            </div>
-
-            <!-- card -->
-            <div class="card">
-                <dv>
-                    <img src="../images/What-is-Coding.jpg" alt="">
-                </dv>
-                <div class="card-body">
-                    <h3 class="mt-2">What is Coding</h3>
-
-                    <p class="mt-4">
-                        Lorem ipsum dolor sit amet consectetur iste. Quod excepturi accusamus
-                    </p>
-                </div>
-            </div>
-
-            <!-- card -->
-            <div class="card">
-                <dv>
-                    <img src="../images/women-in-tech2-1.jpg" alt="">
-                </dv>
-                <div class="card-body">
-                    <h3 class="mt-2">What is Coding</h3>
-
-                    <p class="mt-4">
-                        Lorem ipsum dolor sit amet consectetur iste. Quod excepturi accusamus
-                    </p>
-                </div>
-            </div>
-
         </div>
     </main>
 
