@@ -4,7 +4,7 @@ const blogContent = (req, res) => {
     const title = req.query.q
     console.log(title)
 
-    const query = `SELECT * FROM Blogs WHERE blogTitle = "${title}"`;
+    const query = `SELECT * FROM blogs WHERE blogTitle = "${title}"`;
 
     conn.query(query, (error, result) => {
 
@@ -24,7 +24,7 @@ const blogContentUsingId = (req, res) => {
     const id = req.query.id
     const conn = req.conn
 
-    const query = `SELECT * FROM Blogs WHERE Id = "${id}"`
+    const query = `SELECT * FROM blogs WHERE Id = "${id}"`
 
     conn.query(query, (error, result) => {
 
@@ -45,7 +45,7 @@ const blogByAuthor = (req, res) => {
         const author = req.query.author
 
         if (author === 'Select') query = `SELECT * FROM Blogs`
-        else query = `SELECT * FROM Blogs WHERE Authors = "${author}"`
+        else query = `SELECT * FROM blogs WHERE Authors = "${author}"`
 
         console.log(author)
 

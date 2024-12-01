@@ -2,7 +2,7 @@
 const home = (req, res) => {
 
     const connection = req.conn
-    const query = `SELECT * FROM Blogs`
+    const query = `SELECT * FROM blogs`
 
     connection.query(query, (error, result) => {
 

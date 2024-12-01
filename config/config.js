@@ -2,7 +2,7 @@ const PORT = 3000
 const host = 'localhost'
 const user = 'root'
 const password = ''
-const databaseName = 'blogsdb'
+const databaseName = 'blogsDB'
 const hashKey = 10
 const secretKey = '//techBlog'
 
