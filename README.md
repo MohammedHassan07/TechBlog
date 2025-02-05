@@ -1,21 +1,57 @@
 # TechBlog
-A blog website developend in Node.js and MySQL
 
-## Setup
-To run the project follow the below steps
-### Note
-#### To Insert Authors you have to hit the end point from postman <br> or thunderclient or any of these types of software for that matter
-before running the project make sure you have Node.js and xampp installed in your machine <br>
-step-1: Open phpMyAdmin and create database named blogsDB<br>
-step-2: Open the sql file and copy the queries, run this in to the sql query interface<br>
-step-3: Open the terminal in the folder and enter the command ```npm i```<br>
-step-4: After the pocess finished run the command ```npm start```<br>
-step-5: Open your browser and enter the ```localhost:3000/```<br>
-step-6: To enter into admin panel type the url ```localhost:3000/admin```<br>
+TechBlog is a blog website developed using **Node.js, Express.js, HTML, CSS, HBS, and MySQL**. The website allows an **admin** to upload blogs after registering using **JWT authentication**, while **users can read blogs without registration**.
 
-## Admin
-To log in as a auther make sure you created the author from steps<br>
-stpe-1: hit the url ```http://localhost:3000/admin``` <br>
-you will be redirected to log In page. Log In with credintials <br> you will nevigated to admin panel for the authors
-from Admin panle you can insert the blog.
+## Features
 
+- Admin registration using **JWT authentication**.
+- Admin can **upload blogs**.
+- Users can **read blogs without creating an account**.
+
+## Prerequisites
+
+Before running the project, ensure you have the following installed:
+
+- **Node.js**
+- **XAMPP** (to run MySQL and phpMyAdmin)
+
+## Installation and Setup
+
+Follow these steps to set up and run the project:
+
+### Step 1: Set Up the Database
+1. Open **phpMyAdmin** and create a database named **`blogsDB`**.
+2. Open the provided **SQL file**, copy the queries, and execute them in the SQL query interface.
+
+### Step 2: Install Dependencies
+1. Open a terminal in the project folder.
+2. Run the following command to install dependencies:
+
+   ```sh
+   npm install
+  ```
+
+### Step 3: Start the Server
+```sh npm start ```
+
+### Step 4: Open the Website
+- Open your browser and go to:
+http://localhost:3000/
+
+- To access the Admin Panel, enter:
+http://localhost:3000/admin
+
+Admin Panel
+Logging in as an Admin
+
+## To log in as an author, follow these steps:
+Ensure you have created an author (See Step 1: Set Up the Database).
+Open the browser and visit:
+http://localhost:3000/admin
+You will be redirected to the Login Page.
+Enter your credentials to log in.
+Once logged in, you will be redirected to the Admin Panel.
+From the Admin Panel, you can insert blogs.
+
+## Note:
+To insert authors, you need to hit the corresponding API endpoint using tools like Postman, Thunder Client, or any similar software.
