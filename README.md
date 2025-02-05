@@ -32,7 +32,8 @@ Follow these steps to set up and run the project:
   ```
 
 ### Step 3: Start the Server
-```sh npm start ```
+```sh npm start
+```
 
 ### Step 4: Open the Website
 - Open your browser and go to:
