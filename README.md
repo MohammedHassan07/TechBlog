@@ -27,12 +27,12 @@ Follow these steps to set up and run the project:
 1. Open a terminal in the project folder.
 2. Run the following command to install dependencies:
 
-   ```sh
+```sh
    npm install
-  ```
-
+```
 ### Step 3: Start the Server
-```sh npm start
+```sh
+   npm start
 ```
 
 ### Step 4: Open the Website
@@ -42,11 +42,10 @@ http://localhost:3000/
 - To access the Admin Panel, enter:
 http://localhost:3000/admin
 
-Admin Panel
-Logging in as an Admin
+## Admin Panel
+To log in as an author, follow these steps:
+Ensure you have created an author
 
-## To log in as an author, follow these steps:
-Ensure you have created an author (See Step 1: Set Up the Database).
 Open the browser and visit:
 http://localhost:3000/admin
 You will be redirected to the Login Page.
